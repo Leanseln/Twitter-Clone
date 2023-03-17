@@ -1,8 +1,13 @@
+import { useState } from "react"
+import HomePage from "./pages/HomePage"
+import Dashboard from "./pages/logusers/Dashboard"
+
 function App() {
+  const [user,setUser] = useState(null)
 
   return (
     <div className="App">
-      <p>Helloworld</p>
+      {user ? <Dashboard/> : <HomePage/>}
     </div>
   )
 }
